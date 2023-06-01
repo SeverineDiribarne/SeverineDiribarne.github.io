@@ -1,8 +1,8 @@
 /* PAGE D'ACCUEIL */
 
 /*header*/
-#logo{
 
+#logo{
     width: 100%;
     height: auto;
     text-align: center;
@@ -11,6 +11,7 @@
     justify-content: center;
 
 }
+
 .entete{
     display: flex;
     flex-direction: row;
@@ -18,19 +19,23 @@
     height:auto;
     margin-bottom: 20px;
 }
+
 .logo-name{
     display: flex;
     flex-direction: column;
     height:auto;
 }
+
 .image-logo img{
     margin-top: 10px;
     width: 75px;
     height:75px;
 }
+
 .name{
 padding-left: 20px;
 }
+
 .job-title{
     margin-top: auto;
     margin-bottom: auto;
@@ -59,7 +64,6 @@ padding-left: 20px;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .ligne1{
@@ -67,8 +71,8 @@ padding-left: 20px;
     height: 500px;
     background-color: white;
     align-self: center;
-
 }
+
 .ligne2{
     width: 20px;
     height: 500px;
@@ -104,6 +108,7 @@ p {
 /*PAGE QUI SUIS JE*/
 
 /*header*/
+
 .zoneMenuQui{
     display: flex;
     flex-wrap: wrap;
@@ -115,10 +120,12 @@ p {
     flex-flow: row wrap;
     width: 800px;
 }
+
 .menuQui p{
     margin-left: 1%;
     padding-right:0.5%;
 }
+
 hr{
     flex-basis: 100%;
     background-color: black;
@@ -126,7 +133,6 @@ hr{
     width:100%;
     height:3px;
 }
-
 
 /*main*/
 .main{
@@ -147,6 +153,7 @@ hr{
     width:100%;
     height: auto;
 }
+
 .container-image-text img{
     border:5px solid rgb(241, 152, 110);
     max-width:30%;
@@ -184,7 +191,9 @@ height: 550px;
 }
 
 /*inclus dans la page de competences et dans la page
+
 projets*/
+
 .main p{
 display:flex;
 justify-content: center;
@@ -242,6 +251,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     flex-basis: 50%;
     margin-top:1.6%;
 }
+
 .contact-direct p{
 font-size: 1em;
 padding-bottom: 52%;
@@ -253,6 +263,7 @@ form {
     margin: 0 auto;
     padding: 20px;
 }
+
 @media screen and (max-width: 768px) {
     .container {
         display: grid;
@@ -307,7 +318,6 @@ textarea{
     background-color:rgb(244, 198, 176);
     border-radius: 5px;
     margin-left: 87%;
-
 }
 
 label, input, textarea, button1 {
