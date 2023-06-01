@@ -1,0 +1,329 @@
+/* PAGE D'ACCUEIL */
+
+/*header*/
+#logo{
+
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.entete{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height:auto;
+    margin-bottom: 20px;
+}
+.logo-name{
+    display: flex;
+    flex-direction: column;
+    height:auto;
+}
+.image-logo img{
+    margin-top: 10px;
+    width: 75px;
+    height:75px;
+}
+.name{
+padding-left: 20px;
+}
+.job-title{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    font-size: 3em;
+}
+
+/*main*/
+
+.banniere{
+    background-image: url(Images/fond1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    color: black;
+    margin-top: auto;
+    display:flex;
+    align-items:center;
+    border :1px solid black;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.ligne1{
+    width: 20px;
+    height: 500px;
+    background-color: white;
+    align-self: center;
+
+}
+.ligne2{
+    width: 20px;
+    height: 500px;
+    background-color: white;
+    align-self: center;
+}
+
+.button{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    place-items: center center;
+    width: 300px;
+    height: 500px;
+    background-color: rgb(244, 198, 176);
+}
+
+.accueil{
+    padding-top: 5%;
+}
+
+p {
+    font-display:initial;
+    font-size: 1.5em;
+}
+
+.zoneMenu{
+    text-align:center;
+}
+
+/*footer*/
+
+/*PAGE QUI SUIS JE*/
+
+/*header*/
+.zoneMenuQui{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menuQui{
+    display:flex;
+    flex-flow: row wrap;
+    width: 800px;
+}
+.menuQui p{
+    margin-left: 1%;
+    padding-right:0.5%;
+}
+hr{
+    flex-basis: 100%;
+    background-color: black;
+    margin: 10px 0;
+    width:100%;
+    height:3px;
+}
+
+
+/*main*/
+.main{
+    height: 550px;
+}
+
+.paragraphe{
+    font-size: 2em;
+    margin-left: 3%;
+}
+
+.container-image-text{
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:100%;
+    height: auto;
+}
+.container-image-text img{
+    border:5px solid rgb(241, 152, 110);
+    max-width:30%;
+    max-height:auto;
+    margin-left:6%;
+    margin-right: 10%;
+}
+
+.texte{
+    max-width: 90%;
+    max-height: 30%;
+    flex:3;
+    margin-right: 100px;
+    text-align: justify;
+}
+
+.texte h2{
+margin-left: 15%;
+}
+
+/*footer*/
+
+
+
+/*PAGE COMPETENCES*/
+
+/*header*/
+
+
+
+
+/*main*/
+.main{
+height: 550px;
+}
+
+/*inclus dans la page de competences et dans la page
+projets*/
+.main p{
+display:flex;
+justify-content: center;
+}
+
+
+
+/*footer*/
+
+
+
+
+
+/*PAGE PROJETS / REALISATIONS*/
+
+/*header*/
+
+
+
+
+
+/*main*/
+.main{
+    height: 550px;
+    }
+
+
+
+/*footer*/
+
+
+
+
+
+/*PAGE CONTACT*/
+
+/*header*/
+
+
+
+
+
+/*main*/
+
+.paragraphe{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container-contact{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-direct{
+    flex-basis: 50%;
+    margin-top:1.6%;
+}
+.contact-direct p{
+font-size: 1em;
+padding-bottom: 52%;
+}
+
+form {
+    flex-basis: 50%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+@media screen and (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    form, .text {
+      flex-basis: 100%;
+    }
+  }
+
+fieldset {
+    width: auto;
+    border: 3px solid black;
+    padding: 25px 25px;
+}
+
+legend{
+font-size: 2em;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    width:100px;
+    margin-right: 10px;
+}
+
+input {
+    width:50%;
+    margin-left: 10px;
+    flex: 1;
+    border: 1px solid rgb(241, 152, 130);
+    background-color: rgb(244, 205, 176);
+}
+
+textarea{
+    margin-left: 10px;
+    flex: 1;
+    border: 1px solid rgb(241, 152, 130);
+    background-color: rgb(244, 205, 176);
+    font-family: Arial, sans-serif;
+}
+
+.button1{
+    width:auto;
+    padding: 1.5% 3%;
+    border: 1px solid rgb(241, 152, 110);
+    background-color:rgb(244, 198, 176);
+    border-radius: 5px;
+    margin-left: 87%;
+
+}
+
+label, input, textarea, button1 {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    form {
+    max-width: 800px;
+    }
+}
+
+/*footer*/
+
+
+
+
