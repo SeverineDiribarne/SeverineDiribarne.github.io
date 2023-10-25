@@ -45,7 +45,7 @@ padding-left: 20px;
 /*main*/
 
 .banniere{
-    background-image: url(Images/fond1.jpg);
+    background-image: url(Images/fond6.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -86,11 +86,13 @@ padding-left: 20px;
     place-items: center center;
     width: 300px;
     height: 500px;
-    background-color: rgb(244, 198, 176);
+    background-color: #f6ec8b;
 }
 
 .accueil{
-    padding-top: 5%;
+    padding: 12% 5%;
+    border:5px solid #ff8331;
+    border-radius: 100px 100px;
 }
 
 p {
@@ -102,42 +104,15 @@ p {
     text-align:center;
 }
 
-/*footer*/
-
-/*PAGE QUI SUIS JE*/
-
-/*header*/
-
-.zoneMenuQui{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.menuQui{
-    display:flex;
-    flex-flow: row wrap;
-    width: 800px;
-}
-
-.menuQui p{
-    margin-left: 1%;
-    padding-right:0.5%;
-}
-
-hr{
-    flex-basis: 100%;
-    background-color: black;
-    margin: 10px 0;
-    width:100%;
-    height:3px;
-}
-
-/*main*/
+/*qui suis je */
 .main{
     height: 550px;
 }
-
+.quisuisje{
+    padding: 5%;
+    border:5px solid #ff8331;
+    border-radius: 20px 0px;   
+}
 .paragraphe{
     font-size: 2em;
     margin-left: 3%;
@@ -172,7 +147,25 @@ hr{
 .texte h2{
 margin-left: 15%;
 }
+/*competences*/
+.competences{
+    padding: 5%;
+    border:5px solid #ff8331;
+    border-radius: 20px 0px;   
+}
+/* projets*/
+.projets{
+    padding: 5%;
+    border:5px solid #ff8331;
+    border-radius: 20px 0px;   
+}
 
+/*contact*/
+.contact{
+    padding: 5%;
+    border:5px solid #ff8331;
+    border-radius: 20px 0px;   
+}
 /*footer*/
 
 
