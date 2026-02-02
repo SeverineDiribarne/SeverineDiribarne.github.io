@@ -1,275 +1,543 @@
-/* PAGE D'ACCUEIL */
-
-/*header*/
-
-#logo {
-  width: 100%;
-  height: auto;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+/*---------------------------- Global -----------------------------*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-.entete {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: auto;
-  margin-bottom: 20px;
+html {
+  scroll-behavior: smooth;
 }
-
-.logo-name {
-  display: flex;
-  flex-direction: column;
-  height: auto;
+body {
+  font-family: "cookie", sans-serif;
+  background-color: #ffffff;
 }
-
-.image-logo img {
-  width: 100px;
-  height: 75px;
-}
-
-.name {
-  padding-left: 20px;
-}
-
-.job-title {
-  margin-top: auto;
-  margin-bottom: auto;
-  text-align: center;
-  font-size: 3em;
-}
-
-/*main*/
-
-.banniere {
-  background-image: url(Images/fond6.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 500px;
-  width: 100%;
-  color: black;
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  border: 1px solid black;
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.ligne1 {
-  width: 20px;
-  height: 500px;
-  background-color: white;
-  align-self: center;
-}
-
-.ligne2 {
-  width: 20px;
-  height: 500px;
-  background-color: white;
-  align-self: center;
-}
-
-.button {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  place-items: center center;
+/*---------------------------- Navigation Gauche -----------------------------*/
+.nav-gauche {
   width: 300px;
-  height: 500px;
-  background-color: #f6ec8b;
+  height: 100vh;
+  min-height: 800px;
+  background: #3b1503;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px dashed #ffffff;
+  z-index: 5;
+  transition:
+    left 350ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    width 350ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-
-.accueil {
-  padding: 12% 5%;
-  border: 5px solid #ff8331;
-  border-radius: 100px 100px;
+.bloc-menu {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-p {
-  font-display: initial;
-  font-size: 1.5em;
-}
-
-.zoneMenu {
+.bloc-menu span {
+  font-size: 27px;
   text-align: center;
+  position: relative;
+  font-weight: 700;
+  cursor: pointer;
+}
+.bloc-menu span a {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+.bloc-menu span::after {
+  content: "";
+  display: block;
+  width: 0;
+  margin: 5px auto 0 auto;
+  height: 2px;
+  border-radius: 2px;
+  background: #f2f2f2;
+  transition: all 0.2s ease-out;
+}
+.bloc-menu span:hover::after {
+  width: 100%;
+}
+/*---------------------- Portrait--------------------*/
+.bloc-menu:nth-child(1) {
+  width: 100%;
+  height: 25%;
+  background: #3b1503;
+}
+.cercle-portrait {
+  margin: 20px 0;
+  width: 135px;
+  height: 160px;
+  border-radius: 15%;
+  position: relative;
+  box-shadow: 7px 6px 10px #7e573f;
+}
+.cercle-portrait img {
+  width: 135px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15%;
+}
+.logo-cercle {
+  width: 100px;
+  height: 100px;
+  border-radius: 15%;
+  position: absolute;
+  cursor: pointer;
+  bottom: 50px;
+}
+.logo-cercle img {
+  width: 70px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-/*qui suis je */
-.main {
-  height: 550px;
+@media screen and (max-width: 1300px) {
+  .nav-gauche {
+    left: -250px !important;
+    width: 250px;
+    min-height: 300px;
+    transition:
+      left 350ms cubic-bezier(0.22, 0.61, 0.36, 1),
+      width 350ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+  }
+  .menu-visible {
+    left: 0 !important;
+  }
+  .bloc-menu:nth-child(1) {
+    display: none;
+  }
+  .bloc-menu:nth-child(7) {
+    display: none;
+  }
+  .btn-rond-menu {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #f1f1f1;
+    border-radius: 50%;
+    background: #3b1503;
+    background: #3b1503;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+  }
+  .cont-ligne {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .ligne-unique {
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .ligne-unique::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: #f1f1f1;
+    position: absolute;
+    bottom: 10px;
+  }
+  .ligne-unique::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: #f1f1f1;
+    position: absolute;
+    top: 10px;
+  }
+  .cont-ligne.active .ligne-unique::after {
+    top: 0;
+    transform: rotate(45deg);
+    transition:
+      top 300ms ease,
+      transform 300ms 300ms ease;
+  }
+  .cont-ligne.active .ligne-unique {
+    background: transparent;
+  }
+  .cont-ligne.active .ligne-unique::before {
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition:
+      bottom 300ms ease,
+      transform 300ms 300ms ease;
+  }
+
+  /* Sur petit écran, la section Accueil prend toute la largeur.
+     Quand le menu (250px) est affiché, on décale Accueil pour qu'il colle au menu. */
+  .accueil {
+    width: 100%;
+    margin-left: 0;
+  }
+  .nav-gauche.menu-visible ~ .accueil {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+  }
 }
-.quisuisje {
-  padding: 5%;
-  border: 5px solid #ff8331;
-  border-radius: 20px 0px;
+/*------------------------------- Accueil --------------------------------------*/
+.accueil {
+  /* Image de fond de la section Accueil */
+  background: url(ressources/accueil2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+
+  /* Taille de la section (100% hauteur d'écran, min pour éviter l'écrasement) */
+  height: 100vh;
+  min-height: 650px;
+
+  /* Espace dispo quand le menu gauche est visible (menu = 300px sur desktop) */
+  width: calc(100% - 300px);
+  position: relative;
+  margin-left: 300px;
+
+  /* Animation douce quand le menu s'ouvre / se ferme (les éléments ancrés suivent) */
+  transition:
+    margin-left 500ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    width 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /*
+    ANCRAGES "SUR L'IMAGE" (comme les icônes)
+    - ces variables pilotent la position des textes (titre + txt-animation)
+    - plus la valeur RIGHT est grande => l'élément part vers la gauche
+    - plus la valeur TOP est grande => l'élément descend
+  */
+  --h1-right: 330px;
+  --h1-top: 280px;
+  --txt-right: 360px;
+  --txt-top: 390px;
+  will-change: margin-left, width;
 }
-.paragraphe {
-  font-size: 2em;
-  margin-left: 3%;
+h1 {
+  /* Style de base de TOUS les h1 (taille, typo, marge) */
+  font-size: 62px;
+  font-family: "Abril Fatface", sans-serif, cursive;
+  margin: 0 35px;
+  padding-top: 210px;
 }
 
-.container-image-text {
+/* Titre ancré à l'image (comme les icônes) */
+.accueil > h1 {
+  /* On le sort du flux pour pouvoir le placer sur l'image */
+  position: absolute;
+
+  /* Position du titre, pilotée par les variables de .accueil */
+  right: var(--h1-right);
+  top: var(--h1-top);
+
+  /* On annule les marges/padding du style global h1 pour ce titre-là */
+  margin: 0;
+  padding-top: 0;
+
+  /* Taille spécifique au titre de l'accueil */
+  font-size: 52px;
+
+  /* Interligne (entre les 2 lignes du titre) */
+  line-height: 1;
+
+  /* Inclinaison */
+  transform: rotate(19deg);
+  transform-origin: left center;
+
+  /* Au-dessus de l'image */
+  z-index: 2;
+
+  /* Animation douce quand la section change de taille */
+  transition:
+    right 500ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    top 500ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: right, top, transform;
+}
+.accueil > .txt-animation {
+  /* Texte secondaire "collé" à l'image (même logique que le titre) */
+  position: absolute;
+  right: var(--txt-right);
+  top: var(--txt-top);
+  margin: 0;
+  z-index: 2;
+
+  /* Typo + taille */
+  font-family: 'Birthstone','Croissant One', cursive;
+  font-size: 42px;
+
+  /* Interligne */
+  line-height: 0.9;
+
+  /* Inclinaison */
+  transform: rotate(19deg);
+  transform-origin: left center;
+
+  /* Animation douce */
+  transition:
+    right 500ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    top 500ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: right, top, transform;
+}
+.btn-acc {
+  display: inline-flex;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+  background: #3b1503;
+  justify-content: center;
+  align-items: center;
+  color: #f1f1f1;
+  margin: 10px 0 0 0px;
+  border-radius: 2px;
+  font-size: 25px;
+  transition: transform 0.2s ease-in-out;
+}
+.btn-acc:hover {
+  transform: scale(1.02);
+}
+.btn-acc1 {
+  margin: 10px 0 0 35px;
+}
+.btn-acc2 {
+  background: transparent;
+  border: 2px solid #3b1503;
+  color: #3b1503;
+  font-weight: 700;
+  margin-left: 5px;
+}
+.medias {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  height: auto;
+
+  /* Espace entre les icônes media1 / media2 / media3 */
+  gap: 5px;
+  margin: 0;
 }
 
-.container-image-text img {
-  border: 5px solid rgb(241, 152, 110);
-  max-width: 30%;
-  max-height: auto;
-  margin-left: 6%;
-  margin-right: 10%;
+.medias a {
+  display: flex;
+  align-items: center;
 }
-
-.texte {
-  max-width: 90%;
-  max-height: 30%;
-  flex: 3;
-  margin-right: 100px;
-  text-align: justify;
-}
-
-.texte h2 {
-  margin-left: 15%;
-}
-
-/*competences*/
-
-.main p {
+.media {
+  width: 60px;
+  height: 60px;
+  background: #3b1503;
+  border-radius: 50%;
+  margin-right: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  cursor: pointer;
+} 
+.media2 {
+  background: transparent;
+  border: 2px solid #3b1503;
 }
-.competences {
-  padding: 5%;
-  border: 5px solid #ff8331;
-  border-radius: 20px 0px;
+.media2 img{
+  height:31px;
+  width: 27px;
+  border-radius: 8px;
+}
+.media3 img {
+  border-radius: 50%;
+}
+.icone-medias {
+  width: 30px;
+  display: block;
+}
+.btn-rond {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  flex: 0 0 auto;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 #3b1503;
+  background: #3b1503;
+  animation: pulse 1.3s infinite;
 }
 
-/* projets*/
-
-.projets {
-  padding: 5%;
-  border: 5px solid #ff8331;
-  border-radius: 20px 0px;
+.bottom-actions {
+  /* Barre d'actions en bas de l'image (contient flèche + CTA (CallToAction)   + médias) */
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 2;
 }
 
-/*contact*/
-
-.contact {
-  padding: 5%;
-  border: 5px solid #ff8331;
-  border-radius: 20px 0px;
+.bottom-actions .btn-rond {
+  position: absolute;
+  right: 35px;
+  bottom: 0;
 }
 
-.paragraphe {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+/*
+    --medias-right: 640px;
+    --cta-right: calc(var(--medias-right) - 240px);
+  - left en % => ils gardent la même position relative quand l'écran change
+  Ajuste juste --medias-left si tu veux les déplacer.
+*/
+.bottom-actions {
+  /*
+    Variables de position pour les éléments en bas (par rapport à l'image)
+    - --medias-right : ancre le groupe d'icônes (plus grand => plus à gauche)
+    - --cta-right : ancre le groupe Portfolio/Expériences (idem)
+  */
+  --medias-right: 640px;
+  --cta-right: calc(var(--medias-right) - 240px);
+}
+
+.bottom-actions .medias {
+  position: absolute;
+  right: var(--medias-right);
+  top: 50%;
+  transform: translateY(-50%);
+  transition:
+    right 500ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: right, transform;
+}
+
+.bottom-actions .cta-actions {
+  position: absolute;
+
+  /* Position horizontale des boutons (pilotée par --cta-right) */
+  right: var(--cta-right);
+
+  /* Position verticale des boutons (plus bas si tu diminues cette valeur) */
+  bottom: calc(60px - 16px);
+  display: flex;
+  align-items: center;
+
+  /* Espace entre Portfolio et Expériences */
+  gap: 5px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  transition: right 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: right;
+}
+
+.bottom-actions .cta-actions .btn-acc1,
+.bottom-actions .cta-actions .btn-acc2 {
+  margin: 0;
+}
+
+.bottom-actions .cta-actions .btn-acc1 {
+  /* Micro-ajustement uniquement pour le bouton Portfolio */
+  position: relative;
+  top: -64px;
+  left: 0px;
+}
+
+.bottom-actions .cta-actions .btn-acc {
+  width: 180px;
+  height: 50px;
+  font-size: 25px;
+  white-space: nowrap;
+  transform: rotate(19deg);
+  transform-origin: center;
+}
+
+.bottom-actions .cta-actions .btn-acc:hover {
+  transform: rotate(19deg) scale(1.02);
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 8px rgba(59, 21, 3, 0.01);
   }
-  
-  .container-contact {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .contact-direct {
-    flex-basis: 50%;
-    margin-top: 1.6%;
-  }
-  
-  .contact-direct p {
-    font-size: 1em;
-    padding-bottom: 52%;
-  }
-  
-  form {
-    flex-basis: 50%;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .container {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-  
-    form,
-    .text {
-      flex-basis: 100%;
-    }
-  }
-  
-  fieldset {
-    width: auto;
-    border: 3px solid black;
-    padding: 25px 25px;
-  }
-  
-  legend {
-    font-size: 2em;
-  }
-  
-  .form-group {
-    display: flex;
-    align-items: center;
-  }
-  
-  .label {
-    width: 100px;
-    margin-right: 10px;
-  }
-  
-  input {
-    width: 50%;
-    margin-left: 10px;
-    flex: 1;
-    border: 1px solid rgb(241, 152, 130);
-    background-color: rgb(244, 205, 176);
-  }
-  
-  textarea {
-    margin-left: 10px;
-    flex: 1;
-    border: 1px solid rgb(241, 152, 130);
-    background-color: rgb(244, 205, 176);
-    font-family: Arial, sans-serif;
-  }
-  
-  .button1 {
-    width: auto;
-    padding: 1.5% 3%;
-    border: 1px solid rgb(241, 152, 110);
-    background-color: rgb(244, 198, 176);
-    border-radius: 5px;
-    margin-left: 87%;
-  }
-  
-  label,
-  input,
-  textarea,
-  button1 {
-    display: block;
+}
+.logo-btn-rond-acc {
+  width: 30px;
+}
+
+/* Corrections responsive (placées en fin de fichier pour gagner la cascade) */
+@media screen and (max-width: 1300px) {
+  /* Menu caché (icône hamburger seule) => l'image de fond doit prendre toute la largeur */
+  .accueil {
     width: 100%;
-    margin-bottom: 10px;
+    margin-left: 0;
+    transition-delay: 0ms;
   }
-  
-  @media only screen and (min-width: 768px) {
-    form {
-      max-width: 800px;
-    }
+
+  .bottom-actions .medias,
+  .bottom-actions .cta-actions {
+    transition-delay: 0ms;
   }
-  
-/*footer*/
+
+  /* Menu affiché => on réserve 250px à gauche */
+  .nav-gauche.menu-visible ~ .accueil {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+  }
+}
+
+@media screen and (min-width: 1301px) {
+  /* Laisse le menu réapparaître un poil avant le décalage du contenu (évite l'espace blanc) */
+  .accueil {
+    transition-delay: 80ms;
+  }
+
+  .bottom-actions .medias,
+  .bottom-actions .cta-actions {
+    transition-delay: 80ms;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
